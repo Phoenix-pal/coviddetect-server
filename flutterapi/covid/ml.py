@@ -7,7 +7,7 @@ model  = tf.keras.models.load_model('D:/flutter/heroku upload/webapi/flutterapi/
 
 def make_gradcam_heatmap(img_array, model, last_conv_layer_name, pred_index=None):
     # First, we create a model that maps the input image to the activations
-    # of the last conv layer as well as the output predictions
+    # of th last conv layer as well as the output predictions
     grad_model = tf.keras.models.Model(
         [model.inputs], [model.get_layer(last_conv_layer_name).output, model.output]
     )
@@ -68,9 +68,6 @@ def save_and_display_gradcam(img, heatmap, cam_path="cam.jpg", alpha=0.4):
     
     return superimposed_img
     
-preprocess_input = tf.keras.applications.vgg19.preprocess_input
-decode_predictions = tf.keras.applications.vgg19.decode_predictions
-
 last_conv_layer_name = "conv_pw_13_relu"
 img_size = (224,224)
 

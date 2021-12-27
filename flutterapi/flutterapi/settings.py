@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-m2+@xm-a4-oni_%=z@+-8q5-i74+8rj^$*1n!-_haq=#+@5=q4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://covidetection-phoenix.herokuapp.com/','localhost']
+ALLOWED_HOSTS = ['https://covid-detector-phoenix.herokuapp.com/','localhost']
 
 
 

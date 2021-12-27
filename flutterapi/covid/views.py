@@ -9,7 +9,7 @@ from .models import heatmapModel, imgProcess
 from .ml import *
 import requests
 last_conv_layer_name = "conv_pw_13_relu"
-model  = tf.keras.models.load_model('/mobilenet.h5')
+model  = tf.keras.models.load_model('mobilenet.h5')
 def runML(path):
     BS=8
     image = cv2.imread(path)

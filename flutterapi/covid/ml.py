@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.cm as cm
 
 
-model  = tf.keras.models.load_model('D:/flutter/heroku upload/webapi/flutterapi/mobilenet.h5')
+model  = tf.keras.models.load_model('/mobilenet.h5')
 
 def make_gradcam_heatmap(img_array, model, last_conv_layer_name, pred_index=None):
     # First, we create a model that maps the input image to the activations

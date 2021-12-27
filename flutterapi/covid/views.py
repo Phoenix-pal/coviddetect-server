@@ -9,10 +9,10 @@ from .models import heatmapModel, imgProcess
 from .ml import *
 import requests
 last_conv_layer_name = "conv_pw_13_relu"
-model  = tf.keras.models.load_model('D:/flutter/heroku upload/webapi/flutterapi/mobilenet.h5')
+model  = tf.keras.models.load_model('/mobilenet.h5')
 def runML(path):
     BS=8
-    image = cv2.imread('D:/flutter/heroku upload/webapi/flutterapi'+path)
+    image = cv2.imread(path)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     image = cv2.resize(image, (224,224))
     image_array = np.expand_dims(image, axis=0)
@@ -46,7 +46,7 @@ def postData(request):
                 predict = "Negative"
             heatmap = keras.preprocessing.image.img_to_array(heatmap)
             print(heatmap)
-            path = 'D:/flutter/heroku upload/webapi/flutterapi/heatmap/'
+            path = 'heatmap/'
             cv2.imwrite(path+'test2.png',heatmap)
             HeatmapSerializers=heatmapSerializers(data={'imgHeatmap': cv2.imread(path+'test2.png') })
             if HeatmapSerializers.is_valid():

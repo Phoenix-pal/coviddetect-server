@@ -13,7 +13,7 @@ last_conv_layer_name = "conv_pw_13_relu"
 model  = tf.keras.models.load_model('mobilenet.h5')
 def runML(path):
     BS=8
-    image = cv2.imread(path)
+    image = cv2.imread('images/'+path)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     image = cv2.resize(image, (224,224))
     image_array = np.expand_dims(image, axis=0)

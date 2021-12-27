@@ -1,9 +1,5 @@
 import tensorflow as tf
 import numpy as np
-from keras_preprocessing import image
-import cv2
-from tensorflow import keras
-from keras.applications.vgg16 import preprocess_input
 import matplotlib.cm as cm
 
 

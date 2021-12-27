@@ -7,7 +7,7 @@ from rest_framework import status
 from .serializers import covidSerializers, heatmapSerializers
 from .models import heatmapModel, imgProcess
 from .ml import *
-import cv2
+import opencv_python as cv2
 import requests
 last_conv_layer_name = "conv_pw_13_relu"
 model  = tf.keras.models.load_model('mobilenet.h5')
